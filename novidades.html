@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/novidades.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Novidades</title>
+  </head>
+
+  <body>
+    <div class="divheader">
+      <header class="header">
+        <a href="../index.html" class="logo"
+          ><i class="bx bx-disc" id="icon"></i
+        ></a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+          <i class="bx bx-menu"></i>
+        </button>
+
+        <nav class="navbar" id="mytopnav">
+          <a href="sobre.html">Sobre</a>
+          <a href="portfolio.html">Portfólio</a>
+          <a href="novidades.html">Novidades</a>
+          <a href="contato.html">Contato</a>
+        </nav>
+
+        <div class="theme-switch" aria-label="Alternar tema">
+          <button
+            class="theme-btn"
+            type="button"
+            data-theme-choice="light"
+            aria-label="Modo claro"
+            title="Modo claro"
+          >
+            <i class="bx bx-sun"></i>
+          </button>
+          <button
+            class="theme-btn"
+            type="button"
+            data-theme-choice="dark"
+            aria-label="Modo escuro"
+            title="Modo escuro"
+          >
+            <i class="bx bx-moon"></i>
+          </button>
+          <button
+            class="theme-btn"
+            type="button"
+            data-theme-choice="sistema"
+            aria-label="Modo sistema"
+            title="Modo sistema"
+          >
+            <i class="bx bx-desktop"></i>
+          </button>
+        </div>
+      </header>
+    </div>
+
+    <main class="novidades-page">
+      <section class="news-hero" aria-label="Atualização principal">
+        <div class="news-hero-text">
+          <p class="hero-chip">Atualização da semana</p>
+          <h1>Novidades</h1>
+          <p class="hero-subtitle">
+            A página agora acompanha a evolução do site em tempo real: o que
+            entrou, o que está em teste e o que chega em breve!
+          </p>
+          <div class="hero-actions">
+            <a class="hero-btn" href="portfolio.html">Ver portfólio</a>
+            <a class="hero-btn hero-btn-alt" href="contato.html"
+              >Dar sugestão</a
+            >
+          </div>
+        </div>
+        <div class="news-hero-media">
+          <img
+            src="../images/undraw_personal-email_hfut.svg"
+            alt="Ilustração de novidades e atualizações"
+          />
+        </div>
+      </section>
+
+      <section class="news-grid" aria-label="Blocos de novidades">
+        <article class="news-card">
+          <i class="bx bx-rocket news-icon"></i>
+          <h3 class="news-title">Site em evolução</h3>
+          <p class="news-description">
+            O portfólio ganhou cards de projeto, preview visual e links rápidos
+            para navegar entre as seções.
+          </p>
+        </article>
+
+        <article class="news-card">
+          <i class="bx bx-palette news-icon"></i>
+          <h3 class="news-title">Tema personalizado</h3>
+          <p class="news-description">
+            Modos claro, escuro e sistema com botões bonitinhos para a alegria
+            de vossos olhos.
+          </p>
+        </article>
+
+        <article class="news-card">
+          <i class="bx bx-slider-alt news-icon"></i>
+          <h3 class="news-title">Sobre mais interativo</h3>
+          <p class="news-description">
+            Seção Sobre com carrossel, swipe no mobile e bandeiras SVG para os
+            idiomas estudados.
+          </p>
+        </article>
+      </section>
+
+      <section class="roadmap" aria-label="Próximas entregas">
+        <h2>Próximas entregas</h2>
+        <div class="roadmap-list">
+          <article class="roadmap-item done">
+            <span class="roadmap-status">Concluído</span>
+            <h3>Refinamento visual do portfólio</h3>
+            <p>Cards com melhor hierarquia, links e estrutura responsiva.</p>
+          </article>
+
+          <article class="roadmap-item progress">
+            <span class="roadmap-status">Em andamento</span>
+            <h3>Animações de entrada</h3>
+            <p>Transições suaves para destacar conteúdo sem pesar a página.</p>
+          </article>
+
+          <article class="roadmap-item next">
+            <span class="roadmap-status">Próximo</span>
+            <h3>Nova vitrine de projetos</h3>
+            <p>
+              Espaço dedicado para estudos, protótipos e experimentos criativos.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="../js/nav.js"></script>
+  </body>
+</html>

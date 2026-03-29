@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/contato.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Contato</title>
+  </head>
+
+  <body>
+    <div class="divheader">
+      <header class="header">
+        <a href="../index.html" class="logo"
+          ><i class="bx bx-disc" id="icon"></i
+        ></a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+          <i class="bx bx-menu"></i>
+        </button>
+
+        <nav class="navbar" id="mytopnav">
+          <a href="sobre.html">Sobre</a>
+          <a href="portfolio.html">Portfólio</a>
+          <a href="novidades.html">Novidades</a>
+          <a href="contato.html">Contato</a>
+        </nav>
+
+        <div class="theme-switch" aria-label="Alternar tema">
+          <button
+            class="theme-btn"
+            type="button"
+            data-theme-choice="light"
+            aria-label="Modo claro"
+            title="Modo claro"
+          >
+            <i class="bx bx-sun"></i>
+          </button>
+          <button
+            class="theme-btn"
+            type="button"
+            data-theme-choice="dark"
+            aria-label="Modo escuro"
+            title="Modo escuro"
+          >
+            <i class="bx bx-moon"></i>
+          </button>
+          <button
+            class="theme-btn"
+            type="button"
+            data-theme-choice="sistema"
+            aria-label="Modo sistema"
+            title="Modo sistema"
+          >
+            <i class="bx bx-desktop"></i>
+          </button>
+        </div>
+      </header>
+    </div>
+    <div class="form">
+      <form method="post" action="https://api.web3forms.com/submit">
+        <input
+          type="hidden"
+          name="access_key"
+          value="dadcb5c6-f67e-4b70-9f84-998762e09da5"
+        />
+        <div class="form-header">
+          <div class="title">
+            <h1>Entre em contato comigo</h1>
+          </div>
+          <div
+            id="formAlert"
+            class="form-alert"
+            role="status"
+            aria-live="polite"
+          ></div>
+          <div class="input-group">
+            <div class="input-box">
+              <label for="name">Nome</label>
+              <input
+                type="text"
+                id="name"
+                name="nome"
+                placeholder="Digite seu nome"
+                pattern="[A-Za-záéíóúãõâêôàçñ\s]+"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Digite seu email"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <label for="message">Mensagem</label>
+              <textarea
+                id="message"
+                name="mensagem"
+                placeholder="Digite sua mensagem"
+                required
+              ></textarea>
+              <span id="wordCount">0/200</span>
+            </div>
+          </div>
+        </div>
+        <input
+          type="hidden"
+          name="redirect"
+          value="https://web3forms.com/success"
+        />
+        <div class="continue-button">
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+    </div>
+    <script src="../js/nav.js"></script>
+    <script>
+      document
+        .getElementById("name")
+        .addEventListener("input", function (event) {
+          this.value = this.value.replace(/[0-9]/g, "");
+        });
+
+      document
+        .getElementById("message")
+        .addEventListener("input", function (event) {
+          const text = this.value.trim();
+          const words = text ? text.split(/\s+/).length : 0;
+          document.getElementById("wordCount").textContent = words + "/200";
+
+          if (words > 200) {
+            const truncated = text.split(/\s+/).slice(0, 200).join(" ");
+            this.value = truncated;
+            document.getElementById("wordCount").textContent = "200/200";
+          }
+        });
+
+      const formAlert = document.getElementById("formAlert");
+      const params = new URLSearchParams(window.location.search);
+      const status = params.get("status");
+      const message = params.get("message");
+
+      if (status && message) {
+        formAlert.textContent = message;
+        formAlert.classList.add("is-visible");
+        formAlert.classList.toggle("is-success", status === "success");
+        formAlert.classList.toggle("is-error", status === "error");
+        window.history.replaceState(
+          {},
+          document.title,
+          window.location.pathname,
+        );
+      }
+    </script>
+  </body>
+</html>

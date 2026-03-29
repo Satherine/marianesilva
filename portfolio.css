@@ -1,0 +1,207 @@
+.portfolio-page {
+  width: min(94%, 1100px);
+  margin: 2rem auto;
+  padding: 1rem 0 2rem;
+  color: var(--escuro);
+}
+
+.portfolio-header {
+  text-align: center;
+  margin-top: 0.9rem;
+  margin-bottom: 1.8rem;
+}
+
+.portfolio-header h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 4rem;
+  margin: 0.7rem 0 0;
+}
+
+.portfolio-header p {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.8rem;
+  margin: 0.4rem 0 0;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: minmax(260px, 420px) minmax(320px, 1fr);
+  gap: 1.4rem;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.86),
+    rgba(245, 245, 245, 0.88)
+  );
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  padding: 1rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.project-card-next {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 252, 245, 0.95),
+    rgba(250, 244, 230, 0.9)
+  );
+}
+
+.project-preview {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.project-preview img {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  object-fit: cover;
+}
+
+.project-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(21, 21, 21, 0.85);
+  color: #ffffff;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-content h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.4rem;
+  margin: 0;
+}
+
+.project-content p {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  margin: 0.6rem 0 1rem;
+}
+
+.tech-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.tech-list li {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+}
+
+.project-links {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn-link {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: #ffffff;
+  background: #151515;
+  padding: 0.5rem 0.95rem;
+  border-radius: 10px;
+  border: 1px solid #151515;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.btn-link-alt {
+  background: transparent;
+  color: #151515;
+}
+
+.btn-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+html[data-theme="dark"] .project-card {
+  background: linear-gradient(
+    145deg,
+    rgba(42, 35, 56, 0.95),
+    rgba(34, 28, 46, 0.94)
+  );
+  border: 1px solid rgba(199, 177, 240, 0.24);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.38);
+}
+
+html[data-theme="dark"] .project-card-next {
+  background: linear-gradient(
+    145deg,
+    rgba(49, 40, 64, 0.95),
+    rgba(40, 33, 53, 0.94)
+  );
+}
+
+html[data-theme="dark"] .tech-list li {
+  border-color: rgba(217, 205, 240, 0.34);
+  color: #e8dcff;
+}
+
+html[data-theme="dark"] .btn-link {
+  background: #c1a4f5;
+  border-color: #c1a4f5;
+  color: #241d34;
+}
+
+html[data-theme="dark"] .btn-link-alt {
+  background: transparent;
+  color: #e8dcff;
+  border-color: rgba(217, 205, 240, 0.4);
+}
+
+@media (max-width: 900px) {
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-header h1 {
+    font-size: 3.2rem;
+  }
+
+  .portfolio-header p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .project-content h2 {
+    font-size: 2rem;
+  }
+
+  .project-content p {
+    font-size: 1.1rem;
+  }
+}

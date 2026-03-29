@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/portfolio.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Portfólio</title>
+  </head>
+
+  <body>
+    <div class="divheader">
+      <header class="header">
+        <a href="../index.html" class="logo"
+          ><i class="bx bx-disc" id="icon"></i
+        ></a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+          <i class="bx bx-menu"></i>
+        </button>
+
+        <nav class="navbar" id="mytopnav">
+          <a href="sobre.html">Sobre</a>
+          <a href="portfolio.html">Portfólio</a>
+          <a href="novidades.html">Novidades</a>
+          <a href="contato.html">Contato</a>
+        </nav>
+
+        <div class="theme-switch" aria-label="Alternar tema">
+          <button
+            class="theme-btn"
+            type="button"
+            data-theme-choice="light"
+            aria-label="Modo claro"
+            title="Modo claro"
+          >
+            <i class="bx bx-sun"></i>
+          </button>
+          <button
+            class="theme-btn"
+            type="button"
+            data-theme-choice="dark"
+            aria-label="Modo escuro"
+            title="Modo escuro"
+          >
+            <i class="bx bx-moon"></i>
+          </button>
+          <button
+            class="theme-btn"
+            type="button"
+            data-theme-choice="sistema"
+            aria-label="Modo sistema"
+            title="Modo sistema"
+          >
+            <i class="bx bx-desktop"></i>
+          </button>
+        </div>
+      </header>
+    </div>
+
+    <main class="portfolio-page">
+      <section class="portfolio-header">
+        <h1>Portfólio</h1>
+        <p>Projeto em destaque: este próprio site pessoal.</p>
+      </section>
+
+      <section class="projects-list" aria-label="Lista de projetos">
+        <article class="project-card" aria-label="Projeto do site pessoal MSP">
+          <div class="project-preview">
+            <img
+              src="../images/smokey-abstract-2259875.jpg"
+              alt="Preview estilizado do site MSP"
+            />
+            <span class="project-badge">Projeto autoral</span>
+          </div>
+
+          <div class="project-content">
+            <h2>MSP Site Pessoal</h2>
+            <p>
+              Site de apresentação com identidade visual própria, menu
+              responsivo, carrossel na seção Sobre e organização por páginas
+              para contato, novidades e portfólio.
+            </p>
+
+            <ul class="tech-list" aria-label="Tecnologias do projeto">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+            </ul>
+
+            <div class="project-links">
+              <a href="../index.html" class="btn-link">Ver página inicial</a>
+              <a href="sobre.html" class="btn-link btn-link-alt"
+                >Explorar seção Sobre</a
+              >
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="project-card project-card-next"
+          aria-label="Projeto em construção"
+        >
+          <div class="project-preview">
+            <img
+              src="../images/work-in-progress.png"
+              alt="Ilustração de novo projeto em construção"
+            />
+            <span class="project-badge">Em construção</span>
+          </div>
+
+          <div class="project-content">
+            <h2>Novo Projeto Criativo</h2>
+            <p>
+              Próximo projeto do portfólio com foco em front-end, animações e
+              experiência interativa. Em breve com protótipo navegável.
+            </p>
+
+            <ul class="tech-list" aria-label="Tecnologias previstas">
+              <li>UI Design</li>
+              <li>CSS Motion</li>
+              <li>JavaScript</li>
+            </ul>
+
+            <div class="project-links">
+              <a href="novidades.html" class="btn-link">Acompanhar novidades</a>
+              <a href="contato.html" class="btn-link btn-link-alt"
+                >Quero saber primeiro</a
+              >
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="../js/nav.js"></script>
+  </body>
+</html>

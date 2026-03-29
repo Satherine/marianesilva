@@ -1,0 +1,94 @@
+.container {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1rem;
+  background-color: transparent;
+  color: var(--escuro);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 1rem 1.2rem;
+  margin: 8rem auto 1rem;
+  width: min(92%, 720px);
+  max-width: 94%;
+  line-height: 1.4;
+}
+
+@keyframes colorChange {
+  0% {
+    color: #6a0572;
+  }
+  25% {
+    color: #9d4edd;
+  }
+  50% {
+    color: #c77dff;
+  }
+  75% {
+    color: #e0aaff;
+  }
+  100% {
+    color: #6a0572;
+  }
+}
+
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 4.5rem;
+  color: var(--escuro);
+  animation: colorChange 4s ease-in-out infinite;
+}
+
+ul {
+  font-family: "Bebas Neue", sans-serif;
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+  color: var(--escuro);
+}
+
+.maximalista {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #0f7a86;
+}
+
+html[data-theme="dark"] .maximalista {
+  color: #cdb6ff;
+}
+
+.ghost-walker {
+  position: fixed;
+  left: -18vw;
+  bottom: 1.6rem;
+  z-index: 12;
+  pointer-events: none;
+  animation: ghostWalkAcross 16s linear infinite;
+}
+
+.ghost-walker img {
+  width: clamp(62px, 9vw, 110px);
+  height: auto;
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.22));
+}
+
+@keyframes ghostWalkAcross {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(136vw);
+  }
+}
+
+@media (max-width: 768px) {
+  .ghost-walker {
+    bottom: 0.9rem;
+    animation-duration: 12s;
+  }
+}

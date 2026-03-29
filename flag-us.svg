@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 40" role="img" aria-labelledby="title">
+  <title>Bandeira dos Estados Unidos</title>
+  <rect width="64" height="40" fill="#b22234"/>
+  <rect y="3.08" width="64" height="3.08" fill="#ffffff"/>
+  <rect y="9.23" width="64" height="3.08" fill="#ffffff"/>
+  <rect y="15.38" width="64" height="3.08" fill="#ffffff"/>
+  <rect y="21.54" width="64" height="3.08" fill="#ffffff"/>
+  <rect y="27.69" width="64" height="3.08" fill="#ffffff"/>
+  <rect y="33.85" width="64" height="3.08" fill="#ffffff"/>
+  <rect width="28" height="21.54" fill="#3c3b6e"/>
+</svg>

@@ -1,0 +1,286 @@
+.novidades-page {
+  width: min(94%, 1100px);
+  margin: 6.6rem auto 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  color: var(--escuro);
+}
+
+.news-hero {
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) minmax(260px, 360px);
+  gap: 1rem;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(244, 244, 244, 0.92)
+  );
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 22px;
+  padding: 1.2rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.hero-chip {
+  width: fit-content;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  background: #151515;
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  margin-bottom: 0.5rem;
+}
+
+.news-hero h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3.6rem;
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.35rem;
+  margin: 0.5rem 0 0;
+  line-height: 1.2;
+}
+
+.hero-actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.hero-btn {
+  font-family: "Bebas Neue", sans-serif;
+  text-decoration: none;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  background: #151515;
+  color: #ffffff;
+  border: 1px solid #151515;
+  border-radius: 10px;
+  padding: 0.45rem 0.9rem;
+}
+
+.hero-btn-alt {
+  background: transparent;
+  color: #151515;
+}
+
+.news-hero-media {
+  border-radius: 14px;
+  overflow: hidden;
+  background: radial-gradient(
+    circle at 20% 20%,
+    rgba(180, 210, 255, 0.4),
+    rgba(255, 255, 255, 0.9)
+  );
+  display: grid;
+  place-items: center;
+}
+
+.news-hero-media img {
+  width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+  padding: 0.6rem;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.news-card {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  padding: 1.1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.news-icon {
+  font-size: 2rem;
+  color: #4f8fd8;
+  margin-bottom: 0.45rem;
+}
+
+.news-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.55rem;
+  margin: 0;
+}
+
+.news-description {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.15rem;
+  margin-top: 0.35rem;
+  color: #3d3d3d;
+  line-height: 1.2;
+}
+
+.roadmap {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.roadmap h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.2rem;
+  margin: 0 0 0.8rem;
+}
+
+.roadmap-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.roadmap-item {
+  border-radius: 12px;
+  padding: 0.9rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.roadmap-item h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.4rem;
+  margin: 0.2rem 0 0;
+}
+
+.roadmap-item p {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.1rem;
+  margin: 0.35rem 0 0;
+  color: #3f3f3f;
+}
+
+.roadmap-status {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  border-radius: 999px;
+  padding: 0.2rem 0.5rem;
+  display: inline-block;
+}
+
+.roadmap-item.done .roadmap-status {
+  background: rgba(65, 168, 95, 0.2);
+  color: #226638;
+}
+
+.roadmap-item.progress .roadmap-status {
+  background: rgba(69, 129, 224, 0.2);
+  color: #2c4e8d;
+}
+
+.roadmap-item.next .roadmap-status {
+  background: rgba(198, 147, 59, 0.2);
+  color: #7b5310;
+}
+
+html[data-theme="dark"] .news-hero {
+  background: linear-gradient(
+    145deg,
+    rgba(42, 35, 56, 0.95),
+    rgba(34, 28, 46, 0.95)
+  );
+  border-color: rgba(199, 177, 240, 0.24);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.38);
+}
+
+html[data-theme="dark"] .hero-chip {
+  background: #c1a4f5;
+  color: #241d34;
+}
+
+html[data-theme="dark"] .hero-btn {
+  background: #c1a4f5;
+  border-color: #c1a4f5;
+  color: #241d34;
+}
+
+html[data-theme="dark"] .hero-btn-alt {
+  background: transparent;
+  border-color: rgba(217, 205, 240, 0.45);
+  color: #eadfff;
+}
+
+html[data-theme="dark"] .news-hero-media {
+  background: radial-gradient(
+    circle at 20% 20%,
+    rgba(193, 164, 245, 0.22),
+    rgba(36, 30, 52, 0.95)
+  );
+}
+
+html[data-theme="dark"] .news-card,
+html[data-theme="dark"] .roadmap,
+html[data-theme="dark"] .roadmap-item {
+  background: rgba(50, 41, 66, 0.92);
+  border-color: rgba(199, 177, 240, 0.28);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme="dark"] .news-icon {
+  color: #c1a4f5;
+}
+
+html[data-theme="dark"] .news-description,
+html[data-theme="dark"] .roadmap-item p {
+  color: #d9cdf0;
+}
+
+html[data-theme="dark"] .roadmap-item.done .roadmap-status {
+  background: rgba(108, 201, 133, 0.2);
+  color: #a4e7b7;
+}
+
+html[data-theme="dark"] .roadmap-item.progress .roadmap-status {
+  background: rgba(94, 147, 236, 0.24);
+  color: #bdd6ff;
+}
+
+html[data-theme="dark"] .roadmap-item.next .roadmap-status {
+  background: rgba(212, 170, 98, 0.24);
+  color: #f3d9aa;
+}
+
+@media (max-width: 960px) {
+  .news-grid,
+  .roadmap-list {
+    grid-template-columns: 1fr;
+  }
+
+  .news-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .news-hero-media {
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 560px) {
+  .novidades-page {
+    margin-top: 6.1rem;
+  }
+
+  .news-hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle,
+  .news-description,
+  .roadmap-item p {
+    font-size: 1rem;
+  }
+}
